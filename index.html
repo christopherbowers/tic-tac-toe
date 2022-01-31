@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-Tac-Toe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+    * { box-sizing: border-box;}
+
+    body {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      background: #000 url('./assets/remaster.jpg') no-repeat; /* background image from relay.fm */
+      background-size: cover;
+      background-position: center bottom;
+      color: #ddd;
+    }
+
+    .board {
+      display: grid;
+      width: 300px;
+      height: 300px;
+      grid-template-columns: auto auto auto;
+    }
+
+    .square {
+      display: inline-flex;
+      margin: 3px;
+      width: 94px;
+      height: 94px;
+      align-items: center;
+      justify-content: center;
+      font-size: 6em;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+    }
+
+    .square:hover { cursor: pointer;}
+
+    .reset {
+      background-color: rgba(255, 255, 255, 0.75);
+      border: none;
+      border-radius: 4px;
+      color: #D00EA9;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: #000 0px 0px 1px;
+      margin-top: 3em;
+      cursor: pointer;
+      transition: all .25s ease-in-out;
+      box-shadow: 0px 0px 12px 3px #D00EA9;
+    /*   box-shadow: 5px -5px 5px 19px #5B8448; */
+    }
+
+    .reset:hover {
+    /*   background-color: rgba(255, 255, 255, 0.5); */
+      box-shadow: 0px 0px 12px 6px #D00EA9;
+    }
+
+    .score-board { display: none;}
+    .score-board span { border-bottom: 2px solid #fff;}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tic-Tac-Toe</h1>
+    <h2 class="winner">X Goes First</h2>
+    <div class="score-board">
+      <h2>Score: X: <span id="x-score">0</span><h2>
+      <h2>O: <span id="o-score">0</span></h2>
+      <h2>Draw: <span id="draw-score">0</span></h2>
+    </div>
+  </header>
+
+  <div class="board">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+
+  <div>
+    <button class="reset">Reset</button>
+  </div>
+
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
