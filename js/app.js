@@ -56,7 +56,7 @@ const checkForWin = () => {
     winner.innerText = 'O Wins!'
     playerOScore ++
     document.getElementById('o-score').innerText = playerOScore
-    document.querySelector('.score-board').style.opacity = '100%'
+    document.querySelector('.score-board').style.display = 'block'
 //     console.log(gameOver)
     }
 }
